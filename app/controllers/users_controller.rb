@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate, only: [:login, :create, :update, :delete]
+  skip_before_action :authenticate, only: [:login, :create, :update, :destroy]
 
   def create
     @user = User.new(user_params)
@@ -28,6 +28,13 @@ class UsersController < ApplicationController
     else
       render json: @user.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy!
+
+    head :ok
   end
 
   private
