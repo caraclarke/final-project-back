@@ -21,9 +21,12 @@ ActiveRecord::Schema.define(version: 20150906171334) do
     t.string   "title"
     t.text     "caption"
     t.string   "image"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",      null: false
@@ -38,4 +41,5 @@ ActiveRecord::Schema.define(version: 20150906171334) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
+  add_foreign_key "events", "users"
 end
