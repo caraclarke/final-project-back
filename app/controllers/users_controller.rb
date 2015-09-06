@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate, only: [:login, :create]
+  skip_before_action :authenticate, only: [:login, :create, :update, :delete]
 
   def create
     @user = User.new(user_params)
@@ -21,11 +21,20 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      render json: @user
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
-  def set_user
-    @user = User.find(params[:id])
-  end
+  # def set_user
+  #   @user = User.find(params[:id])
+  # end
 
   def user_params
     params.require(:credentials).permit(:email, :password, :password_confirmation, :firstName, :lastName, :admin)

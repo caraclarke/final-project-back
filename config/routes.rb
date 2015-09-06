@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   post '/users' => 'users#create'
   post '/login' => 'users#login'
+  put '/users/:id' => 'users#update'
+  delete '/users/:id' => 'users#destroy'
 
   resources :users
 
