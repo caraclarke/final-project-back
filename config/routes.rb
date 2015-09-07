@@ -7,11 +7,19 @@ Rails.application.routes.draw do
 
   post '/users' => 'users#create'
   post '/login' => 'users#login'
+  get '/users/:id' => 'users#show'
   put '/users/:id' => 'users#update'
   delete '/users/:id' => 'users#destroy'
 
   resources :users
 
+  post '/events' => 'events#create'
+  get '/events' => 'events#index'
+  get '/events/:id' => 'events#show'
+  put '/events/:id' => 'events#update'
+  delete '/events/:id' => 'events#destroy'
+
+  resources :events
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

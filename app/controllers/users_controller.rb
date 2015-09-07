@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate, only: [:login, :create, :update, :destroy]
+  skip_before_action :authenticate, only: [:login, :create, :show, :update, :destroy]
+  # TODO: user show action
 
   def create
     @user = User.new(user_params)
@@ -19,6 +20,11 @@ class UsersController < ApplicationController
     else
       head :unauthorized
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render json: @user #, serializer: ProfileSerializer
   end
 
   def update
