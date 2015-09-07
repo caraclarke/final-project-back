@@ -20,6 +20,12 @@ gem 'active_model_serializers'
 
 gem 'rack-cors', :require => 'rack/cors'
 
+gem 'nokogiri', '~> 1.6.6.2'
+
+gem 'json', '~> 1.8.3'
+
+gem 'wiki-api', git: "git://github.com/dblommesteijn/wiki-api.git"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
