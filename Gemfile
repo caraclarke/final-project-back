@@ -24,6 +24,8 @@ gem 'nokogiri', '~> 1.6.6.2'
 
 gem 'json', '~> 1.8.3'
 
+gem 'httparty'
+
 gem 'wiki-api', git: "git://github.com/dblommesteijn/wiki-api.git"
 
 # Use jquery as the JavaScript library
