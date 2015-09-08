@@ -16,7 +16,7 @@ doc.xpath('//h4').each do |h4_element|
   p h4_element.text
 end
 
-doc.xpath('//p').each do | p_element |
+doc.xpath('//p').each do |p_element|
   p p_element.text
 end
 
