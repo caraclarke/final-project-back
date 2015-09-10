@@ -1,1415 +1,739 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+User.create!({
+              email: 'admin@admin.com',
+              password: 'abc123',
+              password_confirmation: 'abc123',
+              firstName: 'Cara',
+              lastName: 'Clarke',
+              admin: true,
+              token: '' })
 
-admin = User.create!({
-                      email: 'admin@admin.com',
-                      password: 'abc123',
-                      password_confirmation: 'abc123',
-                      firstName: 'Cara',
-                      lastName: 'Clarke',
-                      admin: true,
-                      token: '' })
-
-admin.events.create!([ # contained in giant events object?
-  {
-    'title': 'Early Research and Development'
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1961'
-    },
-    'text': {
-      'headline': '<h3>First packet-switching papers<h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1966'
-    },
-    'text': {
-      'headline': '<h3>Merit Network Founded</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1966'
-    },
-    'text': {
-      'headline': '<h3>ARPANET planning starts</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1969'
-    },
-    'text': {
-      'headline': '<h3>ARPANET carries its first packets</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1970'
-    },
-    'text': {
-      'headline': '<h3>Mark I network at NPL (UK)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1970'
-    },
-    'text': {
-      'headline': '<h3>Network Information Center (NIC)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1971'
-    },
-    'text': {
-      'headline': '<h3>Marit Network\'s packet-switched network operational</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1971'
-    },
-    'text': {
-      'headline': '<h3>Tymnet packet-switched network</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1972'
-    },
-    'text': {
-      'headline': '<h3>Internet Assigned Numbers Authority (IANA) Established</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1973'
-    },
-    'text': {
-      'headline': '<h3>CYCLADES network demonstrated</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1974'
-    },
-    'text': {
-      'headline': '<h3>Telenet packet-switched networks</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1976'
-    },
-    'text': {
-      'headline': '<h3>X.25 protocol approved</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1978'
-    },
-    'text': {
-      'headline': '<h3>Minitel Introduced</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1979'
-    },
-    'text': {
-      'headline': '<h3>Internet Activities Board (IAB)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1980'
-    },
-    'text': {
-      'headline': '<h3>USENET news using UUCP</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1980'
-    },
-    'text': {
-      'headline': '<h3>Ethernet standard introduced</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1981'
-    },
-    'text': {
-      'headline': '<h3>BITNET established</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'title': 'Merging the networks and creating the internet'
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1981'
-    },
-    'text': {
-      'headline': '<h3>Computer Science Network (CSNET)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1982'
-    },
-    'text': {
-      'headline': '<h3>TCP/IP protocol suite formalized</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1982'
-    },
-    'text': {
-      'headline': '<h3>Simple Mail Transfer Protocol (SMTP)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1983'
-    },
-    'text': {
-      'headline': '<h3>Domain Name System (DNS)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1983'
-    },
-    'text': {
-      'headline': '<h3>MILNET split off from APRANET</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1985'
-    },
-    'text': {
-      'headline': '<h3>First .COM domain name registered</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1986'
-    },
-    'text': {
-      'headline': '<h3>Internet Engineering Task Force (IETF)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1987'
-    },
-    'text': {
-      'headline': '<h3>UUNET Founded</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1988'
-    },
-    'text': {
-      'headline': '<h3>OSI Reference Model released</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1988'
-    },
-    'text': {
-      'headline': '<h3>Morris Worm</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1989'
-    },
-    'text': {
-      'headline': '<h3>Border Gateway Protocol (BGP)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1989'
-    },
-    'text': {
-      'headline': '<h3>PSINet founded, allows commercial traffic</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1989'
-    },
-    'text': {
-      'headline': '<h3>Federal Internet Exchanges (FIXes)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1990'
-    },
-    'text': {
-      'headline': '<h3>GOSIP (without TCP/IP)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1990'
-    },
-    'text': {
-      'headline': '<h3>ARPANET decommissioned</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1990'
-    },
-    'text': {
-      'headline': '<h3>Advanced Network and Services (ANS)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1990'
-    },
-    'text': {
-      'headline': '<h3>UUNET/Alternet allows commercial traffic</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1990'
-    },
-    'text': {
-      'headline': '<h3>Archie search engine</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1991'
-    },
-    'text': {
-      'headline': '<h3>Wide area information server (WAIS)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1991'
-    },
-    'text': {
-      'headline': '<h3>Gopher</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1991'
-    },
-    'text': {
-      'headline': '<h3>Commercial Internet eXchange (CIX)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1991'
-    },
-    'text': {
-      'headline': '<h3>ANC CO+RE allows commercial traffic</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1991'
-    },
-    'text': {
-      'headline': '<h3>World Wide Web (WWW)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1992'
-    },
-    'text': {
-      'headline': '<h3>Internet Society (ISOC) established</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1993'
-    },
-    'text': {
-      'headline': '<h3>Classless Inter-Domain Routing (CIDR)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1993'
-    },
-    'text': {
-      'headline': '<h3>InterNIC established</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1993'
-    },
-    'text': {
-      'headline': '<h3>Mosaic web browser released</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1994'
-    },
-    'text': {
-      'headline': '<h3>Full text web search engines</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'title': 'Commercialization, privatization, broader access leads to the modern internet.'
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1995'
-    },
-    'text': {
-      'headline': '<h3>New Internet architecture</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1995'
-    },
-    'text': {
-      'headline': '<h3>NSFNET decommissioned</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1995'
-    },
-    'text': {
-      'headline': '<h3>very high-speed Backbone Network Service (vBNS)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1996'
-    },
-    'text': {
-      'headline': '<h3>IPv6 Proposed</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1998'
-    },
-    'text': {
-      'headline': '<h3>Internet Corporation for Assigned Names and Numbers (ICANN)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1999'
-    },
-    'text': {
-      'headline': '<h3><IEEE 801.11b wireless networking</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1999'
-    },
-    'text': {
-      'headline': '<h3>Internet2/Abilene Network</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '1999'
-    },
-    'text': {
-      'headline': '<h3>vBNS_ allows broader access</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2000'
-    },
-    'text': {
-      'headline': '<h3>Dot-com bubble bursts</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2001'
-    },
-    'text': {
-      'headline': '<h3>New top-level domain names activated</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2001'
-    },
-    'text': {
-      'headline': '<h3>Code Red 1, Code Red 2 & Nimda Worms</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2003'
-    },
-    'text': {
-      'headline': '<h3>UN World Summit on the Information Society (WSIS) Phase 1</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2004'
-    },
-    'text': {
-      'headline': '<h3>UN Working Group on Internet Governance (WGIG)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2005'
-    },
-    'text': {
-      'headline': '<h3>UN WSIS Phase 2</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2006'
-    },
-    'text': {
-      'headline': '<h3>First meeting of the Internet Governance Forum</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2010'
-    },
-    'text': {
-      'headline': '<h3>First internationalized country code top-level domains registered</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2012'
-    },
-    'text': {
-      'headline': '<h3>ICANN begins accepting applications for new generic top-level domain names</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2013'
-    },
-    'text': {
-      'headline': '<h3>Montevideo Statement on the Future of Internet Cooperation</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'start_date': {
-      'year': '2014'
-    },
-    'text': {
-      'headline': '<h3>NetMundial international Internet governance proposal</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'title': 'Examples of Popular Internet Services'
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1990'
-    },
-    'text': {
-      'headline': '<h3>IMDb</h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1995'
-    },
-    'text': {
-      'headline': '<h3><Amazon.com/h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1995'
-    },
-    'text': {
-      'headline': '<h3>eBay</h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1995'
-    },
-    'text': {
-      'headline': '<h3>Craigslist</h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1996'
-    },
-    'text': {
-      'headline': '<h3>Hotmail</h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1997'
-    },
-    'text': {
-      'headline': '<h3>Babel Fish</h3>',
-      'text': '<p>Automatic translation</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1998'
-    },
-    'text': {
-      'headline': '<h3>Google Search</h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1998'
-    },
-    'text': {
-      'headline': '<h3>Yahoo Clubs</h3>',
-      'text': '<p>Now Yahoo! Groups</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1998'
-    },
-    'text': {
-      'headline': '<h3>PayPal</h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '1999'
-    },
-    'text': {
-      'headline': '<h3>Napster</h3>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2001'
-    },
-    'text': {
-      'headline': '<h3>BitTorrent</h3>',
-      'text': '<p>Peer-to-peer file sharing.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2001'
-    },
-    'text': {
-      'headline': '<h3>Wikipedia</h3>',
-      'text': '<p>The free ecyclopedia</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2003'
-    },
-    'text': {
-      'headline': '<h3>LinkedIn</h3>',
-      'text': '<p>Business Networking</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2003'
-    },
-    'text': {
-      'headline': '<h3>Myspace</h3>',
-      'text': '<p>Social networking.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2003'
-    },
-    'text': {
-      'headline': '<h3>Skype</h3>',
-      'text': '<p>Internet voice calls.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2003'
-    },
-    'text': {
-      'headline': '<h3>iTunes Store</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2003'
-    },
-    'text': {
-      'headline': '<h3>4Chan</h3>',
-      'text': '<p>Anonymous image-based bulletin board.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2003'
-    },
-    'text': {
-      'headline': '<h3>The Pirate Bay</h3>',
-      'text': '<p>Torrent file host.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2004'
-    },
-    'text': {
-      'headline': '<h3>Facebook</h3>',
-      'text': '<p>Social networking site.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2004'
-    },
-    'text': {
-      'headline': '<h3>Podcast</h3>',
-      'text': '<p>Media file series.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2004'
-    },
-    'text': {
-      'headline': '<h3>Flickr</h3>',
-      'text': '<p>Image hosting.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2005'
-    },
-    'text': {
-      'headline': '<h3>YouTube</h3>',
-      'text': '<p>Video sharing.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2005'
-    },
-    'text': {
-      'headline': '<h3>Reddit</h3>',
-      'text': '<p>Link voting.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2005'
-    },
-    'text': {
-      'headline': '<h3>Google Earth</h3>',
-      'text': '<p>Virtual globe.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2006'
-    },
-    'text': {
-      'headline': '<h3>Twitter</h3>',
-      'text': '<p>Microblogging.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2007'
-    },
-    'text': {
-      'headline': '<h3>WikiLeaks</h3>',
-      'text': '<p>Anonymous news and information leaks.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2007'
-    },
-    'text': {
-      'headline': '<h3>Google Street View</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2007'
-    },
-    'text': {
-      'headline': '<h3>Kindle</h3>',
-      'text': '<p>E-Reader and virtual bookshop.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2008'
-    },
-    'text': {
-      'headline': '<h3>amazon Elastic Compute Cloud (EC2)</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2008'
-    },
-    'text': {
-      'headline': '<h3>Dropbox</h3>',
-      'text': '<p>Cloud-based file hosting.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2008'
-    },
-    'text': {
-      'headline': '<h3>Ecyclopedia of Life</h3>',
-      'text': '<p>Collaborative encyclopedia intended to document all living species.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2008'
-    },
-    'text': {
-      'headline': '<h3>Spotify</h3>',
-      'text': '<p>DRM-based music streaming service.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2009'
-    },
-    'text': {
-      'headline': '<h3>Bing</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2009'
-    },
-    'text': {
-      'headline': '<h3>Google Docs</h3>',
-      'text': '<p>Web-based word processor, spreadsheet, presentation, form and data storage service.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2009'
-    },
-    'text': {
-      'headline': '<h3>Kickstarter</h3>',
-      'text': '<p>Threshold pledge system.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2009'
-    },
-    'text': {
-      'headline': '<h3>Bitcoin</h3>',
-      'text': '<p>Digital currency.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2010'
-    },
-    'text': {
-      'headline': '<h3>Instagram</h3>',
-      'text': '<p>Photo sharing and social networking.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2011'
-    },
-    'text': {
-      'headline': '<h3>Google+</h3>',
-      'text': '<p></p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2011'
-    },
-    'text': {
-      'headline': '<h3>Snapchat</h3>',
-      'text': '<p>Photo sharing.</p>'
-    }
-  },
-  {
-    'media': {
-          'url': '',
-          'caption': ''
-    },
-    'group': 'Popular Internet Services',
-    'start_date': {
-      'year': '2012'
-    },
-    'text': {
-      'headline': '<h3>Coursera</h3>',
-      'text': '<p>Massive open online courses.</p>'
-    }
+Event.create!([
+  {
+    'date': '1961',
+    'title': 'First packet-switching papers',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1966',
+    'title': 'Merit Network Founded',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1966',
+    'title': 'ARPANET planning starts',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1969',
+    'title': 'ARPANET carries its first packets',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1970',
+    'title': 'Mark 1 network at NPL (UK)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1970',
+    'title': 'Network Information Center (NIC)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1971',
+    'title': 'Marit Network\'s packet-switching network operational',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1971',
+    'title': 'Tymnet packet-switched network',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1972',
+    'title': 'Internet Assigned Numbers Authority (IANA) Established',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1973',
+    'title': 'CYCLADES network demonstrated',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1974',
+    'title': 'Telemet packet-switched networks',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1976',
+    'title': 'X.25 protocol approved',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1978',
+    'title': 'Minitel Introduced',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1979',
+    'title': 'Internet Activities Board (IAB)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1980',
+    'title': 'USENET news using UUCP',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1980',
+    'title': 'Ethernet standard introduced',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1981',
+    'title': 'BITNET established',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1981',
+    'title': 'Computer Science Network (CSNET)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1982',
+    'title': 'TCP/IP protocol suite formalized',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1982',
+    'title': 'Simple Mail Transfer Protocol (SMTP)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1983',
+    'title': 'Domain Name System (DNS)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1983',
+    'title': 'MILNET split off from ARPANET',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1985',
+    'title': 'First .COM domain name registered',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1986',
+    'title': 'Internet Engineering Task Force (IETF)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1987',
+    'title': 'UUNET Founded',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1988',
+    'title': 'OSI Reference Model released',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1988',
+    'title': 'Morris Worm',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '',
+    'title': '',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1989',
+    'title': 'PSINet founded, allows commercial traffic',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1989',
+    'title': 'Federal Internet Exchanges (FIXes)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1990',
+    'title': 'GOSIP (without TCP/IP)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1990',
+    'title': 'ARPANET decommissioned',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1990',
+    'title': 'Advanced Network and Services (ANS)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1990',
+    'title': 'UUNET/Alternet allows commercial traffic',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1990',
+    'title': 'Archie search engine',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1991',
+    'title': 'Wide area information server (WAIS)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1991',
+    'title': 'Gopher',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1991',
+    'title': 'Commercial Internet eXchange (CIX)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1991',
+    'title': 'ANC CO+RE allows commercial traffic',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1991',
+    'title': 'World Wide Web (WWW)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1992',
+    'title': 'Internet Society (ISOC) established',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1993',
+    'title': 'Classless Inter-Domain Routing (CIDR)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1993',
+    'title': 'InterNIC established',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1993',
+    'title': 'Mosaic web browser released',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1994',
+    'title': 'Full text web search engines',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1995',
+    'title': 'Internet Architecture',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1995',
+    'title': 'NSFNET decommissioned',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1995',
+    'title': 'Very high-speed Backbone Network Service (vBNS)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1996',
+    'title': 'IPv6 Proposed',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1998',
+    'title': 'Internet Corporation for Assigned Names and Numbers (ICANN)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1999',
+    'title': 'IEEE 801.11b wireless networking',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1999',
+    'title': 'Internet2/Abilene Network',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1999',
+    'title': 'vBNS allows broader access',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2000',
+    'title': 'Dot-com bubble bursts',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2001',
+    'title': 'New top-level domain names activated',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2001',
+    'title': 'Code Red 1, Code Red 2 & Nimda Worms',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2003',
+    'title': 'UN World Summit on the Information Society (WSIS) Phase 1',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2004',
+    'title': 'UN Working Group on Internet Governance',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2005',
+    'title': 'UN WSIS Phase 2',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2006',
+    'title': 'First meeting of the Internet Governance Forum',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2010',
+    'title': 'First internationalized country code top-level domains registered',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2012',
+    'title': 'ICANN begins accepting applications for new generic top-level domain names',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2013',
+    'title': 'Montevideo Statement on the Future of Internet Corporation',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2014',
+    'title': 'NetMundial International Internet governance proposal',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1990',
+    'title': 'IMDb',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1995',
+    'title': 'Amazon.com',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1995',
+    'title': 'eBay',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1995',
+    'title': 'Craigslist',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1996',
+    'title': 'Hotmail',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1997',
+    'title': 'Babel Fish',
+    'caption': 'Automatic translation',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1998',
+    'title': 'Google Search',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1998',
+    'title': 'Yahoo Clubs',
+    'caption': 'Now Yahoo! Groups',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1998',
+    'title': 'PayPal',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '1999',
+    'title': 'Napster',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2001',
+    'title': 'BitTorrent',
+    'caption': 'Peer-to-peer file sharing.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2001',
+    'title': 'Wikipedia',
+    'caption': 'The free encyclopedia',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2003',
+    'title': 'LinkedIn',
+    'caption': 'Business Networking',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2003',
+    'title': 'Myspace',
+    'caption': 'Social networking.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2003',
+    'title': 'Skype',
+    'caption': 'Internet voice calls.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2003',
+    'title': 'iTunes Store',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2003',
+    'title': '4chan',
+    'caption': 'Anonymous image-based bulletin board',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2003',
+    'title': 'The Pirate Bay',
+    'caption': 'Torrent file host.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2004',
+    'title': 'Facebook',
+    'caption': 'Social networking site.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2004',
+    'title': 'Podcast',
+    'caption': 'Media file series.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2004',
+    'title': 'Flickr',
+    'caption': 'Image hosting.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2005',
+    'title': 'YouTube',
+    'caption': 'Video sharing.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2005',
+    'title': 'Reddit',
+    'caption': 'Link voting.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2005',
+    'title': 'Google Earth',
+    'caption': 'Virtual globe.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2006',
+    'title': 'Twitter',
+    'caption': 'Microblogging.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2007',
+    'title': 'WikiLeaks',
+    'caption': 'Anonymous news and information leaks.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2007',
+    'title': 'Google Street View',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2007',
+    'title': 'Kindle',
+    'caption': 'E-Reader and virtual bookshop.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2008',
+    'title': 'Amazon Elastic Compute Cloud (EC2)',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2008',
+    'title': 'Dropbox',
+    'caption': 'Cloud-based file hosting.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2008',
+    'title': 'Encyclopedia of Life',
+    'caption': 'Collaborative encyclopedia intended to document all living species.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2008',
+    'title': 'Spotify',
+    'caption': 'DRM-based music streaming services.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2009',
+    'title': 'Bing',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2009',
+    'title': 'Google Docs',
+    'caption': 'Web-based word processor, spreadsheet, presentation, form and data storage service',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2009',
+    'title': 'Kickstarter',
+    'caption': 'Threshold pledge system',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2009',
+    'title': 'Bitcoin',
+    'caption': 'Digital currency.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2010',
+    'title': 'Instagram',
+    'caption': 'Photo sharing and social networking.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2011',
+    'title': 'Google+',
+    'caption': '',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2011',
+    'title': 'Snapchat',
+    'caption': 'Photo sharing.',
+    'image': '',
+    'user_id': 1
+  },
+  {
+    'date': '2012',
+    'title': 'Coursera',
+    'caption': 'Massive open online courses.',
+    'image': '',
+    'user_id': 1
   }
-]);
+])
