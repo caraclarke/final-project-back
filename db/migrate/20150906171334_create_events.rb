@@ -5,7 +5,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string :title, index: true
       t.text :caption
       t.string :image
-      t.references :user, index: true, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps null: false
     end
