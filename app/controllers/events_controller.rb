@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   skip_before_action :authenticate, only: [:index, :destroy, :update]
 
   def index
-    @event = Event.all
+    @event = Event.order(:date)
 
     render json: @event # , each_serializer: EventSerializer
   end
