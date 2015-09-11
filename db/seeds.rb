@@ -60,7 +60,7 @@ Event.create!([
   {
     'date': '1971',
     'title': 'Tymnet packet-switched network',
-    'caption': '',
+    'caption': 'Tymnet was an international data communications network headquartered in Cupertino, California that used virtual call packet switched technology and X.25, SNA/SDLC, ASCII and BSC interfaces to connect host computers (servers) at thousands of large companies, educational institutions, and government agencies. Users typically connected via dial-up connections or dedicated asynchronous connections.',
     'image': '',
     'user_id': 1
   },
