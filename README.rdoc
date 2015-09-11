@@ -9,3 +9,6 @@ When deciding on what to use for the back end of my project I knew I wanted to u
 I used ruby version 2.2.2 and deployed my back end to heroku.
 
 As I continue to work on this project I want to add more authentication so that only my admin user can perform certain actions.
+
+ERD -
+https://github.com/caraclarke/final-project-back/blob/master/project4-erd.pdf
