@@ -1,28 +1,11 @@
-== README
+#final-project-back
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In my project I used HTML/CSS and AngularJS on the front end with Ruby on Rails and PostgreSQL on my back end.
 
-Things you may want to cover:
+I began the planning for my back end by creating my ERD. I knew what information I wanted my website to contain and began by thinking how I could store that.
+From there I moved on to planning what keys each table would need and how they could be related so that my admin user could work with the events.
 
-* Ruby version
+When deciding on what to use for the back end of my project I knew I wanted to use Ruby on Rails and PostgreSQL.
+I used ruby version 2.2.2 and deployed my back end to heroku.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+As I continue to work on this project I want to add more authentication so that only my admin user can perform certain actions.
