@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  skip_before_action :authenticate, only: [:show, :index, :create, :update, :destroy]
+  skip_before_action :authenticate, only: [:index, :destroy, :update]
 
   def index
     @event = Event.all
@@ -27,7 +27,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update(event_params)
-      render json: @event, status: :accepted
+      render json: @event
     else
       render json: @event.errors, status: :unprocessable_entity
     end

@@ -11,14 +11,14 @@ Event.create!([
   {
     'date': '1961',
     'title': 'First packet-switching papers',
-    'caption': '',
+    'caption': 'The packet switching concept was first invented by Paul Baran in the early 1960\'s, and then independently a few years later by Donald Davies. Leonard Kleinrock conducted early research in the related field of digital message switching, and helped build the ARPANET, the world\'s first packet switching network.  Baran invented the concept of packet switching while a young electrical engineer at RAND when he was asked to perform an investigation into survivable communications networks for the US Air Force, building on one of the first wide area computer networks created for the SAGE radar defence system.',
     'image': '',
     'user_id': 1
   },
   {
     'date': '1966',
     'title': 'Merit Network Founded',
-    'caption': '',
+    'caption': 'Founded by Michigan State University, the University of Michigan, and Wayne State University, Merit established networking in Michigan long before the term "Internet" was invented. Merit pioneered many of the practices and protocols used in today\'s Internet. In 1987, a Merit-led consortium (including IBM, MCI, and the Michigan Strategic Fund) won a $39 million grant from the National Science Foundation to re-engineer and manage the NSFNET, the first national high-speed Internet backbone for research and education. The NSFNET led directly to the growth of the commercial Internet.',
     'image': '',
     'user_id': 1
   },
