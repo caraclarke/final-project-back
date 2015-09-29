@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  skip_before_action :authenticate, only: [:index, :destroy, :update]
+  skip_before_action :authenticate, only: [:index, :show, :destroy, :update]
 
   def index
     @event = Event.order(:date)
